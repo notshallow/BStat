@@ -1,0 +1,5 @@
+var = runif(1000,min=0,max=2)
+hist(var, breaks=c(0,2))
+hist(var, breaks=c(0,1,2))
+hist(var, breaks=c(0,2),prob=T)
+hist(var, breaks=c(0,1,2),prob=T)

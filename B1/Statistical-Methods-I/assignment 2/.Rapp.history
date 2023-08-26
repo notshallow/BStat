@@ -1,0 +1,255 @@
+coin1 = sample(2,1000,replace=T,prob=c(0.3,0.7))-1
+coin2 = sample(2,1000,replace=T,prob=c(0.6,0.4))-1
+temp = rep(0,2000)
+odd = seq(1,1999,2)
+even = seq(2,2000,2)
+temp[odd] = coin1
+temp[even] = coin2
+ntoss = 1:2000
+list = cumsum(temp)
+plot(ntoss,list/ntoss,ty='l',ylim=c(0,1))
+library(tuneR)
+hist(readWave('~/Code/R programming/assignment 0/Q3-silent.wav')@left,prob=T)
+h1 = hist(readWave('~/Code/R programming/assignment 0/Q3-silent.wav')@left,prob=T)
+h2 = hist(readWave('~/Code/R programming/assignment 0/Q3-loud.wav')@left,prob=T)
+plot(h1, col=rgb(0,0,1,1/4), xlim=c(-40000,40000))
+plot(h2, col=rgb(1,0,0,1/4), xlim=c(-40000,40000), add = T)
+plot(h1, col=rgb(0,0,1,1/4), xlim=c(-40000,40000), xlab="Histogram")
+plot(h2, col=rgb(1,0,0,1/4), xlim=c(-40000,40000), add = T)
+#Q4
+#Ans
+load(".RData")
+ls()
+ls
+ls()
+''
+ls()
+lavda
+ls
+ls()
+lavda
+ls()
+var = runif(1000,min=0,max=2)
+hist(var, breaks=c(0,2))
+hist(var, breaks=c(0,1,2))
+hist(var, breaks=c(0,1,2),prob=T)
+hist(var, breaks=c(0,2),prob=T)
+hist(var, breaks=c(0,1,2),prob=T)
+hist(var, breaks=c(0,1,2),prob=T)
+ls()
+setwd('~/Code/R programming/assignment 2/')
+read.csv('data_poisson.csv')
+data = read.csv('data_poisson.csv')
+y =  cumsum(data[,3])
+y
+setwd('~/Code/R programming/assignment 2/')
+ls()
+data = ('data_poisson.csv')
+install.packages('pscl')
+library(pscl)
+data(prussian)
+corpP <- glm(y ~ corp, family=poisson,data=prussian)
+corpP
+summary(corpP)
+ls()
+data
+data = read.csv('data_poisson.csv')
+data
+data[,1]
+data[,2]
+data[,1]==data[,2]
+sum(data[,1]==data[,2])
+data
+setwd('~/Code/R programming/assignment 2/')
+data = read.csv('data_poisson.csv')
+data
+data = read.csv('data_poisson.csv')
+data
+summary(data)
+dats$X
+data$X
+data$corps
+data$corp
+hist(y)
+hist(data$y)
+table(data$y)
+table(data$y)[3]
+hist(table(data$y))
+plot(table(data$y))
+barplot(table(data$y))
+library(MASS)
+fitdistr(data$y,"poisson")
+fitdistr(table(data$y),"poisson")
+barplot(table(data$y),prob=1)
+barplot(table(data$y),prob=T)
+index = 0:4
+280*dpois(index,0.7)
+table(data$y)
+table1 = table(data$y)
+table2 = 280*dpois(index,0.7)
+table1
+table2
+table1 = table(data$y)[,]
+table1 = table(data$y)[1,]
+table1 = table(data$y)[,1]
+table1 = table(data$y)[]
+table1
+lines(280*dpois(index,0.7),add = T)
+curve(280*dpois(index,0.7),add = T)
+x = 280*dpois(index,0.7)
+curve(280*dpois(index,0.7),0,4)
+dweibull(x,shape= 0.93, scale= 43.49)
+x
+curve(dweibull(x,shape= 0.93, scale= 43.49), col='red', lwd=3, add=T)
+curve(280*dweibull(x,shape= 0.93, scale= 43.49), col='red', lwd=3, add=T)
+curve(280*dpois(index,lambda = 0.7),lwd = 3, add = T)
+dp
+dp <- function(x, lbd = 0.5 * 100) dpois(x, lambda = lbd)
+dp
+dp <- function(x, lbd = 0.7) dpois(x, lambda = lbd)
+dp
+curve( dp , 0, 100)
+barplot(table(data$y),prob=T)
+curve( dp , 0, 4,add = T)
+warnings()
+x <- rpois(1000, 0.5 * 100)#
+dp <- function(x, lbd = 0.5 * 100) dpois(x, lambda = lbd)#
+curve(dp, 0, 100)#
+hist(x, freq = FALSE, add = TRUE)
+x <- rpois(1000, 0.5 * 100)#
+dp <- function(x, lbd = 0.5 * 100) dpois(x, lambda = lbd)#
+curve(dp, 0, 100)
+x
+280*dpois(index,0.7)
+x = 280*dpois(index,0.7)
+dp <- function(x, lbd = 0.7 * 280) dpois(x, lambda = lbd)
+curve(dp, 0, 4)
+curve(dp, 0, 10)
+curve(dp, 0, 5)
+dp(0,5)
+dp(0)
+dp
+dp(140)
+x
+curve(dpois(x, lambda=6), xlim = c(0, 4), n = 5)
+barplot(table(data$y),prob=T,add=T)
+curve(280*dpois(x, lambda=6), xlim = c(0, 4), n = 5)
+barplot(table(data$y),prob=T,add=T)
+curve(280*dpois(x, lambda=6), xlim = c(0, 4), n = 5)
+hist(table(data$y),prob=T,add=T)
+hist(table(data$y),prob=F,add=T)
+barplot(table(data$y),prob=T)
+barplot(table(data$y))
+curve(280*dpois(x, lambda=6), xlim = c(4,0), n = 5)
+barplot(table(data$y))
+curve(280*dpois(x, lambda=6), xlim = c(4,0), n = 5, add = T)
+curve(280*dpois(x, lambda=6), xlim = c(4,0), n = 5)
+barplot(table(data$y))
+curve(280*dpois(x, lambda=0.7), xlim = c(4,0), n = 5)
+curve(280*dpois(x, lambda=0.7), xlim = c(0,4), n = 5)
+barplot(table(data$y))
+curve(280*dpois(x, lambda=0.7), xlim = c(0,4), n = 5,add = T)
+hist(data$y)
+curve(280*dpois(x, lambda=0.7), xlim = c(0,4), n = 5,add = T)
+hist(data$y, break=c(0,1,2,3,4))
+?hist
+hist(data$y, breaks=c(0,1,2,3,4))
+curve(280*dpois(x, lambda=0.7), xlim = c(0,4), n = 5,add = T)
+barplot(table(data$y))
+curve(280*dpois(x, lambda=0.7), xlim = c(0,4), n = 5,add = T)
+curve(280*dpois(x, lambda=0.7), n = 5,add = T)
+curve(280*dpois(x, lambda=0.7), n = 5,add = T, xlim = 0:4)
+curve(280*dpois(x, lambda=0.7), n = 5,add = T, xlim = c(0,8))
+barplot(table(data$y))
+curve(280*dpois(x, lambda=0.7), n = 5,add = T, xlim = c(0,8))
+curve(280*dpois(x, lambda=0.7), n = 5,add = T, xlim = c(0,7))
+curve(280*dpois(x, lambda=0.7), n = 5,add = T, xlim = c(0,10))
+curve(280*dpois(x, lambda=0.7), n = 5,add = T, xlim = c(0,12))
+barplot(table(data$y))
+curve(280*dpois(x, lambda=0.7), n = 5,add = T, xlim = c(0,12))\
+curve(280*dpois(x, lambda=0.7), n = 5,add = T, xlim = c(0,12))
+table(data$y)
+x = table(data$y)
+y = 280*dpois(index,0.7)
+df<-data.frame(x)
+df
+df  = data.table(x)
+df  = table(x)
+df
+df<-data.frame(x)
+df
+?rbid
+?rbind
+df <- cbind(df, data.frame(x = y))
+df
+df <- cbind(df, data.frame(bruh = y))
+df
+colnames(df)
+colnames(df)[1]
+colnames(df)[1] = "Number of deaths per corps-year"
+colnames(df)[2] = "Observed number of deaths"
+colnames(df)[3] = "Predicted number of deaths by poissons distribution"
+df
+colnames(df)[3] = "Predicted number of deaths"
+df
+df
+colnames(df)[1] = "No. of deaths per corp-year"
+colnames(df)[2] = "Observed no. of deaths"
+colnames(df)[3] = "Predicted no. of deaths"
+df
+df[4]
+df[-4]
+df = df[-4]
+df
+pdf(file = "Q2.pdf")
+library(gridExtra)
+install.packages('gridExtra')
+library(gridExtra)
+grid.table(df,show.rownames = FALSE)
+grid.table(df)
+dev.off()
+grid.table(df)
+grid.table(df,show.rownames = F)
+grid.table(df, rows = NULL)
+grid.table(df, rows = NULL)
+grid.table(df, rows = [])
+grid.table(df, rows = '')
+grid.table(df, rows = NA)
+grid.table(df, rows = columns)
+grid.table(df, rows = column)
+grid.table(df, rows = c("","","","","",""))
+grid.table(df, rows = c("","","","","","",""))
+grid.table(df, rows = c("","","","",""))
+pdf(file = "Q2-lol.pdf", height = 10)
+grid.table(df, rows = c("","","","",""))
+grid.table(df)
+dev.off()
+pdf(file = "Q2-lol.pdf", height = 3)
+grid.table(df,rows = NULL)
+pdf(file = "Q2-lolI.pdf", height = 3)
+grid.table(df,rows = NULL)
+dev.off()
+read.csv('data_poisson.csv')
+data = read.csv('data_poisson.csv')
+ls()
+pdf(file = "Q2-l.pdf", height = 3)
+df
+df[1]
+df[2]
+df[3]
+kkk = df[3]
+df[3] = df[2]
+df
+df[2] = kkk
+df
+colnames(df)
+colnames(df)[2]
+kkk = colnames(df)[2]
+colnames(df)[2] = colnames(df)[3]
+colnames(df)[3] = kkk
+df
+colnames(df)[2]
+colnames(df)[2] = "fitted Poisson PMFs"
+colnames(df)[3] = "observed relative frequencies"
+grid.table(df,rows = NULL)
+dev.off()
