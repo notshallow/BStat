@@ -1,13 +1,17 @@
-'''
-123456789
-456789123
-789123456
-234567891
-567891234
-891234567
-345678912 
-678912345 
-912345678
+'''Write a program that takes a 9 × 9 matrix as input and 
+checks whether it is a valid Sudoku matrix or not. Recall that 
+a Sudoku matrix is filled in with numbers from 1-9 with no 
+repeated numbers in each line, horizontally or vertically. E.g., 
+the following is a valid Sudoku matrix.
+1 2 3 4 5 6 7 8 9
+4 5 6 7 8 9 1 2 3 
+7 8 9 1 2 3 4 5 6 
+2 3 4 5 6 7 8 9 1 
+5 6 7 8 9 1 2 3 4
+8 9 1 2 3 4 5 6 7 
+3 4 5 6 7 8 9 1 2 
+6 7 8 9 1 2 3 4 5 
+9 1 2 3 4 5 6 7 8
 '''
 
 sudoku = []
