@@ -9,7 +9,7 @@ n = int(input("please input list of digits\n"))
 
 temp = n
 modsum = 0
-arr = [0,0,0,0,0,0,0,0,0,0]
+arr = [0]*10
 
 while temp:
 	modsum += (temp%10)
