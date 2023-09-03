@@ -14,4 +14,4 @@ m = int(input("Please enter m to create 2^m * 2^m matrix"))
 
 my_arr = np.reshape(np.arange(1,2**(2*m)+1),(2**m,2**m))
 
-z_func(0,0,3,3,my_arr)
+z_func(0,0,2**m -1, 2**m -1,my_arr)
