@@ -10,7 +10,7 @@ def z_func(x1,y1,x2,y2,arr):
 		z_func((x1+x2)//2 +1, y1,x2,(y1+y2)//2,arr)
 		z_func((x1+x2)//2 +1, (y1+y2)//2 +1, x2,y2,arr)
 
-m = int(input("Please enter m to create 2^m * 2^m matrix"))
+m = int(input("Please enter m to create 2^m * 2^m matrix \n"))
 
 my_arr = np.reshape(np.arange(1,2**(2*m)+1),(2**m,2**m))
 
