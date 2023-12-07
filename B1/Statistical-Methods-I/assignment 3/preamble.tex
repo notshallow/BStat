@@ -1,0 +1,26 @@
+\usepackage{scrextend}
+\usepackage{xparse}
+
+\let\tmpsh\Shaded
+\let\tmpshend\endShaded
+\let\Shaded\relax
+\let\endShaded\relax
+
+\let\oldincludegraphics\includegraphics
+
+\renewcommand{\includegraphics}[2][]{%
+  \begin{center}
+      \oldincludegraphics[#1,height = 10cm , width = 10cm]{#2}
+  \end{center}
+}
+
+\DeclareDocumentEnvironment{Shaded}{}{
+    \begin{addmargin}[1em]{2em}
+    \tmpsh
+    }{
+    \tmpshend
+    \end{addmargin}
+}
+
+\usepackage{newpxtext,newpxmath}
+\usepackage{xfrac}
