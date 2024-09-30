@@ -1,4 +1,4 @@
-This project delves into the exploration of sequential testing.
+## This project delves into the exploration of sequential testing.
 
 The desired test procedure should split the sample space into three parts: accept, reject and continue. This
 project will explore a simple toy version of this: there are 20 closed boxes, exactly 5 of which contain a Rs 5
