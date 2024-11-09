@@ -1,0 +1,52 @@
+---
+title: "Assignment 1"
+output:
+  pdf_document:
+    includes:
+      in_header: "preamble.tex"
+    toc: true
+    pandoc_args: ["--wrap=none"]
+author: Deep Hariya, BS2324
+---
+
+\newpage
+
+# Question 1:
+
+\smallskip
+
+Consider the dataset about Amazon books stored given in the class web- page. Use R to compute the multiple correlation between **Amazon** **Price**
+
+and (**NumPages**, **Height**, **Width** and **Thickness**). You may use direct computation or a package.
+
+\medskip
+
+## Solution:
+
+```{r}
+x = read.delim('amazon-books.txt')
+x = na.omit(x)
+dat = x[,c(3,4,6,10,11,12,13)]
+names(dat) = c('lp','ap','page','h','w','t','wt')
+tmp = lm(ap~page+h+w+t,data=dat)
+sqrt(summary(tmp)$r.sq)
+```
+
+\newpage
+
+# Question 2:
+
+\smallskip
+
+Use the same data set once again to compute partial correlation between **List** **Price** and **Amazon Price** given **Weight** and **Thick**. You may use direct computation or a package.
+
+\medskip
+
+## Solution:
+
+```{r}
+ap.filtered = lm(ap~w+t,data=dat)$resid
+lp.filtered = lm(lp~w+t,data=dat)$resid
+cor(ap.filtered, lp.filtered)
+
+```
