@@ -1,0 +1,16 @@
+****** PSID DATA CENTER ************************* 
+****** Variable labels for JobID = 339732 ******* 
+
+Variable    Labels
+
+ER53001    RELEASE NUMBER                          
+ER53002    2013 FAMILY INTERVIEW (ID) NUMBER       
+ER53017    AGE OF HEAD                             
+ER53019    AGE OF WIFE                             
+ER53023    HEAD MARITAL STATUS                     
+ER53935    G13 WAGES/SALARY-HEAD                   
+ER54309    WAGES/SALARY OF WIFE                    
+ER58223    COMPLETED ED-HD                         
+ER58224    COMPLETED ED-WF                         
+
+*** End of labels ******************************* 
